@@ -1,25 +1,33 @@
 from odoo import api, fields, models
+from datetime import date
 
 
 class HospitalPatient(models.Model):
     _name = "hospital.patient"
+    _inherit = ["mail.thread", "mail.activity.mixin"]
     _description = "Hospital Patient"
 
     name = fields.Char(string='Name')
-    age = fields.Integer(string="Age")
+    last_name = fields.Char(string='Last Name')
+    full_name = fields.Char(string="Full Name", compute='_compute_full_name')
+    date_of_birth = fields.Date('Date Of Birth')
+    ref = fields.Char(string='Reference')
+    age = fields.Integer(string="Age", compute='_compute_age')
     gender = fields.Selection([('male', 'Male'), ('female', 'Female')], string="Gender")
-    
+    active = fields.Boolean(string="Active", default=True)
+    tag_ids = fields.Many2many('patient.tag', string="Tags")
 
-    """
-    name = fields.Char(string='Account Type', required=True, translate=True)
-    include_initial_balance = fields.Boolean(string="Bring Accounts Balance Forward", help="Used in reports to know if we should consider journal items from the beginning of time instead of from the fiscal year only. Account types that should be reset to zero at each new fiscal year (like expenses, revenue..) should not have this option set.")
-    type = fields.Selection([
-        ('other', 'Regular'),
-        ('receivable', 'Receivable'),
-        ('payable', 'Payable'),
-        ('liquidity', 'Liquidity'),
-    ], required=True, default='other',
-        help="The 'Internal Type' is used for features available on "\
-        "different types of accounts: liquidity type is for cash or bank accounts"\
-        ", payable/receivable is for vendor/customer accounts.")
-        """
+
+
+    def _compute_full_name(self):
+        for rec in self:
+            rec.full_name = f"{rec.name} {rec.last_name}"
+
+    def _compute_age(self):
+        for rec in self:
+            today = date.today()
+            if rec.date_of_birth:
+                rec.age = today.year-rec.date_of_birth.year
+            else:
+                rec.age = 0
+
