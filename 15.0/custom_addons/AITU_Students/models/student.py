@@ -1,8 +1,9 @@
 from odoo import api, fields, models
+from datetime import date
 
 
 class Student(models.Model):
-    _name = "AITU.student"
+    _name = "aitu.student"
     _description = "AITU Student"
 
     name = fields.Char(string='Name')

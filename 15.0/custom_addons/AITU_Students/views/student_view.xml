@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_aitu_student_tree" model="ir.ui.view">
+        <field name="name">aitu.student.tree</field>
+        <field name="model">aitu.student</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Student Name"/>
+                <field name="age"/>
+                <field name="gender"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_aitu_student_form" model="ir.ui.view">
+        <field name="name">aitu.student.form</field>
+        <field name="model">aitu.student</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                              <field name="gender"/>
+                        </group>
+
+                        <group>
+                            <field name="course"/>
+                            <field name="age"/>
+                        </group>
+
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_aitu_student_search" model="ir.ui.view">
+        <field name="name">aitu.student.search</field>
+        <field name="model">aitu.student</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="Student Name"/>
+                <field name="age"/>
+                <field name="gender"/>
+
+            </search>
+        </field>
+    </record>
+
+
+   <record id="aitu_student" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">aitu.student</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Student
+            </p>
+        </field>
+    </record>
+
+ <menuitem id="menu_student_root"
+              name="Students"
+              parent="menu_aitu_root"
+              sequence="0"/>
+</odoo>
