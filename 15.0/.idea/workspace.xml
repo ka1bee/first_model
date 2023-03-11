@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14111a0e-f4ee-4cf4-bb71-cf7a12d2786d" name="Changes" comment="mm">
-      <change afterPath="$PROJECT_DIR$/custom_addons/AITU_Students/security/ir.model.access.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom_addons/AITU_Students/views/menu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom_addons/AITU_Students/views/student_view.xml" afterDir="false" />
+    <list default="true" id="14111a0e-f4ee-4cf4-bb71-cf7a12d2786d" name="Changes" comment="aitu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom_addons/AITU_Students/models/student.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_addons/AITU_Students/models/student.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom_addons/AITU_Students/views/student_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/custom_addons/AITU_Students/views/student_view.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +111,8 @@
       <workItem from="1678216429183" duration="1002000" />
       <workItem from="1678351824637" duration="9211000" />
       <workItem from="1678461856732" duration="21840000" />
-      <workItem from="1678529902699" duration="1781000" />
+      <workItem from="1678529902699" duration="1833000" />
+      <workItem from="1678550052187" duration="1660000" />
     </task>
     <task id="LOCAL-00001" summary="mm">
       <created>1678483164548</created>
@@ -122,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678483164548</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="aitu">
+      <created>1678531700964</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678531700964</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,9 +136,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mm" />
-    <option name="LAST_COMMIT_MESSAGE" value="mm" />
+    <MESSAGE value="aitu" />
+    <option name="LAST_COMMIT_MESSAGE" value="aitu" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/15_0$odoo15.coverage" NAME="odoo15 Coverage Results" MODIFIED="1678530489613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/15_0$odoo15.coverage" NAME="odoo15 Coverage Results" MODIFIED="1678551631018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

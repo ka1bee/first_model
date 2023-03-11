@@ -8,5 +8,6 @@ class Student(models.Model):
 
     name = fields.Char(string='Name')
     age = fields.Integer(string="Age")
-    course = fields.Integer(string="Course")
+    course = fields.Selection([('1', '1'), ('2', '2'), ('3', '3')], string="Course")
     gender = fields.Selection([('male', 'Male'), ('female', 'Female')], string="Gender")
+
